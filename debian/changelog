@@ -1,3 +1,11 @@
+xfce4-volumed (0.2.0-0ubuntu2-galliumos1) vivid; urgency=medium
+
+  * debian/patches/volume-icon-fixes.patch
+    - Fixed muted icon from being changed to off icon
+    - Fixed muted icon from being changed to volume low  
+
+ -- Hugh Greenberg <hugh@galliumos.org>  Wed, 26 Apr 2016 19:13:44 -0500
+
 xfce4-volumed (0.2.0-0ubuntu2) vivid; urgency=medium
 
   * debian/patches/01_fork-before-gtk-init.patch
