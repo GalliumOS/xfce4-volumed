@@ -1,0 +1,384 @@
+commit aabce76c099f2bcb41013b90f0799671e350793d
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Sun Mar 10 21:16:03 2013 +0100
+
+    Prepare for 0.2.0
+
+commit c5f57007bd9c9dec7be42bf1dca43e5ed07190cb
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Sun Mar 10 20:53:30 2013 +0100
+
+    Correctly support program renaming
+    
+    The autostart desktop file is also renamed. This is provided for distributors
+    who want to use xfce4-volumed-pulse as a drop-in replacement of xfce4-volumed
+    (i.e. invisible transition) instead of shipping both.
+
+commit 8d1ceaac728e42f5d762e9b6fec5a310cf3c0571
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Sun Mar 10 19:28:11 2013 +0100
+
+    Fix author, add missing copyright and lp project page
+
+commit 6058cce016d583f1e74ee7db9ae0cab7579c9a9b
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Sat May 26 15:41:02 2012 +0200
+
+    Do not show notifications when nothing changed
+    
+    Pulse seems to emit a sink updated signal when a new sound program starts (e.g.
+    when the browser loads a flash video). Don't display a notification in this
+    case.
+
+commit f86468296f1f081d6aed217802c1e58f1210e772
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 21:45:57 2012 +0200
+
+    Improve libnotify include guards
+
+commit 2a3192b933f4081faa0d02b093409243d1f2d531
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 21:38:58 2012 +0200
+
+    fix errors in full debug mode
+
+commit 8fff66196d49f48234c001eb6d3b2792d5827817
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 21:23:55 2012 +0200
+
+    Improve error handling
+
+commit 1d2073cd404aef4d58469f4fba89021310eaec97
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 21:06:27 2012 +0200
+
+    Support command line options
+    
+    For now, only --version and --no-daemon.
+
+commit 79545b194b4848e21f1df1e107fc86875c17da32
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 20:47:08 2012 +0200
+
+    Clean up includes
+
+commit c9ca43825bdec7298f9e88c5e37d75b48879a93b
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 18:38:07 2012 +0200
+
+    fix old style function definition
+
+commit 014554d88fd0033108ef9683bc5cf6e42fc31087
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 18:35:27 2012 +0200
+
+    add missing cflags/libs/includes for gtk
+
+commit 62cd790f3b52fc168c4655e2e56b7148d7cfc168
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 18:30:36 2012 +0200
+
+    add missing include for errno
+
+commit e05c8a45b40dc562551b675d90e62ae34faf88c5
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 18:20:11 2012 +0200
+
+    fix typos breaking ./autogen.sh
+
+commit 4272f431ec385af9909de6c68124c4f3ee4f4027
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 18:02:54 2012 +0200
+
+    Simplify daemonization (stolen from xfsettingsd)
+
+commit 33e6ea9e4e5db7505fabe3d81d2e266547467990
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 17:56:04 2012 +0200
+
+    redo proper autotoolize similar to xfce components
+
+commit feb4dfca4352d64bd6e384d423318fb58fdfde90
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Fri May 25 16:47:01 2012 +0200
+
+    fix checks
+
+commit 146f3768c10ff9958740432c4bd610d68a2d445d
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 23:24:41 2012 +0200
+
+    harmonize types, volume is in -1~101 for notifs
+
+commit 282d9bb498f9ca22db2c79a0372cdcace9dc1f2d
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 23:15:26 2012 +0200
+
+    Reinstate use of the vol-step xfconf property
+
+commit 21862f544eded91ed85ed8ea3153c61eef5f95e1
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 23:08:24 2012 +0200
+
+    fix icon name typo
+    
+    NotifyOSD spec uses -zero instead, but I can't find it in elementary-xfce.
+
+commit 0e79edb4f0e9b05ab074aa53ff40e76b79192191
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 23:05:47 2012 +0200
+
+    move the enum to datatypes
+
+commit 0f56e8ddeb9fe59b33ab5c2c30a0bf52a0e2d186
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 23:03:04 2012 +0200
+
+    Refactor to get rid of current_vol/new_vol
+    
+    Also add comments, and clean up code
+
+commit 8e393dfb0eb25083b6f8ab033c47a84475e1263c
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 22:18:41 2012 +0200
+
+    delete old gstmixer files
+
+commit e65a13d042181f23e642f6f7d7a85511dc424144
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 21:33:37 2012 +0200
+
+    clean up clamp code
+
+commit 00cf078290bd4ddba302e03620f602141abb3dd6
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:55:30 2012 +0200
+
+    check error codes
+    
+    Ensure that a mute/volchange operation succeeded before displaying a
+    notification.
+
+commit d42154cf383ce46610f1818f35b54d7253375722
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:34:20 2012 +0200
+
+    Add todo list
+
+commit 4dbd7d4418df72073b2f6c7ff1b7c992966031e0
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:33:07 2012 +0200
+
+    fix autofoo files
+
+commit faacee702c6ed8b3f339a875bde7799fb75402a7
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:30:51 2012 +0200
+
+    bsaic/braindead porting done
+
+commit 5d8c72a68cd4df9ec4515b0fc52199ad3ade63b3
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:27:23 2012 +0200
+
+    fix struct field name
+    
+    yes, that looks useless, but it's too late
+
+commit d4118f3d5e9edfc5716750f672c929eeefd75b57
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:25:44 2012 +0200
+
+    drop card/track properties from xfconf
+    
+    We only want to use whatever sink is set as default by pulseaudio.
+
+commit f62ee80d410bbd6218b49e9d7051ceafc79103d6
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:21:48 2012 +0200
+
+    updated for pulse support
+    
+    Notifications will be called through libpulse callbacks
+
+commit d95b2839f4014467e3f5654ea3a158f0ce67d634
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:19:52 2012 +0200
+
+    Port XvdInstance to libpulse
+
+commit f0175482c825a418f5a6a182066dfd4aac413c2d
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:18:59 2012 +0200
+
+    Clean up extra spaces
+
+commit 4c0e52313e19f35325ec38f513aa1682265a721e
+Author: Lionel Le Folgoc <lionel@lefolgoc.net>
+Date:   Thu May 24 20:15:59 2012 +0200
+
+    Port xfce4-volumed to pulseaudio
+
+commit 0ebbdc3c2734f498965d9104b0f8d0a563a39806
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Sun Mar 6 12:29:43 2011 +0100
+
+    Changed CFLAGS again in configure.ac
+
+commit 2ee3b12be641501ee3a9ce0278291b8c5a865021
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Mar 3 11:43:26 2011 +0100
+
+    Removed deprecated "Encoding" entry in .desktop file (thanks to Samuli Suominen)
+
+commit ca667792ad88e2e90e7ae4dac56fe299171aedb7
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Mar 3 11:36:34 2011 +0100
+
+    Releasing 0.1.13, see Changelog
+
+commit 4dd3a0c7f28c56997410f9da3fa9dba3ae0dc750
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Mar 3 11:36:03 2011 +0100
+
+    Allow compatibility with Libnotify 0.7 (thanks to Samuli Suominen for the patch)
+
+commit c76a8a531c8be646ac15a33fc8168e4387250d0d
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Mar 3 11:33:42 2011 +0100
+
+    Partially applied a patch from Yves-Alexis Perez to allow custom CFLAGS in release mode
+
+commit caec4ccd142a961f4a575601eb27857f24062fac
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Wed Mar 2 20:30:02 2011 +0100
+
+    Releasing 0.1.12 (bugfix only), see Changelog
+
+commit 1cac2a0e63b476d69bc5ad93474776d80f9dbab3
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Sun Nov 21 23:17:42 2010 +0100
+
+    Revert "Patch by Corsac allowing configure.ac to use a predefined CFLAGS environment variable"
+    
+    This reverts commit cbff81851006207fa02a0c6bdc4aa7f40b88c383.
+
+commit cbff81851006207fa02a0c6bdc4aa7f40b88c383
+Author: Yves-Alexis Perez <corsac@corsac.net>
+Date:   Sun Nov 21 23:15:46 2010 +0100
+
+    Patch by Corsac allowing configure.ac to use a predefined CFLAGS environment variable
+
+commit 832d4fd6691e54a805a585448f2d1c02966c64ba
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Nov 18 16:59:44 2010 +0100
+
+    Releasing 0.1.11, see ChangeLog
+
+commit 4ad92331c550cdbda9b9d299465f9fab3568cd94
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Nov 18 16:58:44 2010 +0100
+
+    Added a volume channel number check before calling gst_mixer_get_volume
+
+commit ffa0271f280f7234d7ab1250f8ce9484390ef302
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Nov 18 16:42:10 2010 +0100
+
+    Prevent possible SIGFPE if a track has a 0 volume range
+
+commit 998fcc86d0358b32f2a529e13569d76d72fea959
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Nov 18 16:37:58 2010 +0100
+
+    Fix desktop file's exec path
+
+commit 8f2d0d10348453a29036007133cae657da68d9b3
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Tue Nov 2 14:14:43 2010 +0100
+
+    Releasing v 0.1.10, see ChangeLog
+
+commit 8a97a19a9b8adfe06b5bbdf67f9a753541069ea4
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Tue Nov 2 13:59:35 2010 +0100
+
+    Now binding all keys with modifiers instead of just the modless volume keys
+
+commit af2ddc039bc575518a99c80c39abe0ddcc388156
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Sat Sep 25 09:36:58 2010 +0200
+
+    Releasing 0.1.9, with Jérôme Guelfucci's patch replacing xvd with keybinder
+
+commit 52a6cfd053b6d80300e62f6bac914d7df08d6a09
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Tue Nov 17 22:12:01 2009 +0100
+
+    Release 0.1.8, see changelog
+
+commit 457f29e3340ea20180c285de5b80f48d3ad10227
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Sat Oct 31 17:40:36 2009 +0100
+
+    0.1.7 release - better compatibility with xfce4-notifyd
+
+commit 4f6e8bb3216ef0a140d4b813a6e8527f96590e62
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Wed Oct 28 16:28:14 2009 +0100
+
+    Fixing a build error with --disable-libnotify, patch from Ṣalāḥ ad-Dīn Yūsuf ibn Ayyūb
+
+commit 1b67b1210e7b74cc8fab4bde0c0ef47d9747fd7e
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Wed Oct 28 00:25:05 2009 +0100
+
+    Fix a autogen warning before release
+
+commit 012e34a4a22a2f4cec8a1234723e218f94571ee1
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Wed Oct 28 00:13:59 2009 +0100
+
+    Deleted module.xml by accident..
+
+commit 4390847f0e6f19b2a2d4af809c4e683c1f671ca6
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Wed Oct 28 00:13:01 2009 +0100
+
+    0.1.5, support for async notifications and legacy xcb-keysyms
+
+commit dcd449bb429adaf0284ad344b1a1175bbdb97b62
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Fri Sep 4 19:17:41 2009 +0200
+
+    New release : 0.1.4 (see changelog
+
+commit 7e722d72d919d6eff1f34695562810a04c2724dc
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Sep 3 13:05:32 2009 +0200
+
+    Updating version number for 0.1.3 release
+
+commit 5dcee1ca38c3f512779baefcf8138d1397ea9787
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Sep 3 12:44:51 2009 +0200
+
+    ... really fixing that error in xvd_notify
+
+commit 7893b6ed6898a7d3d8186daf2f156a40826b59d4
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Sep 3 12:43:46 2009 +0200
+
+    Adding module.xml and fixing an error w/ libnotify
+
+commit 67075a321368eef8a7ccf943e1575bd5fb44dcbf
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Thu Sep 3 12:11:36 2009 +0200
+
+    0.1.3 release
+
+commit f31fbf7351491f2d667900ade0e40112974c2799
+Author: Steve Dodier <sidnioulz@gmail.com>
+Date:   Wed Aug 26 15:27:40 2009 +0200
+
+    Initial commit, import 0.1.2 from launchpad

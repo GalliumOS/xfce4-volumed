@@ -1,0 +1,110 @@
+xfce4-volumed (0.2.0-0ubuntu2) vivid; urgency=medium
+
+  * debian/patches/01_fork-before-gtk-init.patch
+    - Fix unresponsiveness after communicating with daemon (LP: #1347272)
+
+ -- Sean Davis <smd.seandavis@gmail.com>  Sat, 21 Feb 2015 19:13:44 -0500
+
+xfce4-volumed (0.2.0-0ubuntu1) raring; urgency=low
+
+  * New upstream release (FFe lp: #1153378) with pulseaudio support.
+    lp: #883485, #970009, #990562
+  * debian/patches/xubuntu_preselect-pulseaudio.patch: dropped, unneeded.
+  * debian/rules:
+    - disable silent rules
+    - keep the program named xfce4-volumed so the change is invisible to the
+      users.
+  * Add a manpage. lp: #428023
+  * debian/control:
+    - build-depends on libpulse-dev instead of libgstreamer0.10-dev and
+      libgstreamer-plugins-base0.10-dev.
+    - recommends pulseaudio instead of gstreamer.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 14 Mar 2013 22:39:32 +0100
+
+xfce4-volumed (0.1.13-3ubuntu1) raring; urgency=low
+
+  * Merge from Debian unstable. Remaining changes:
+    - debian/patches:
+      + xubuntu_preselect-pulseaudio.patch: added, try to prefer the pulseaudio
+        mixer if no default setting exists in the Xubuntu session ; taking a
+        random mixer (e.g. the first one) causes too many mute/unmute issues
+        (cf. lp #883485). The behavior with a vanilla xfce session remains
+        unchanged.
+
+ -- Logan Rosen <logatronico@gmail.com>  Sat, 27 Oct 2012 15:06:53 -0400
+
+xfce4-volumed (0.1.13-3) unstable; urgency=low
+
+  * debian/control:
+    - add depends on a gstreamer audiosink.                     closes: #673060
+    - update debhelper build-dep to 9 and add dpkg-dev 1.16.1 build-dep for
+      hardening support.
+    - update standards version to 3.9.3.
+  * debian/rules:
+    - switch to dpkg-dev 1.16.1 an debhelper 9 hardening support.
+  * debian/compat bumped to 9.
+  * debian/xfce4-volumed.lintian-overrides added, override warnings for
+    hardening flags, we do use them.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Tue, 15 May 2012 22:56:32 +0200
+
+xfce4-volumed (0.1.13-2ubuntu1) precise; urgency=low
+
+  * debian/patches:
+    - xubuntu_preselect-pulseaudio.patch: added, try to prefer the pulseaudio
+      mixer if no default setting exists in the Xubuntu session ; taking a
+      random mixer (e.g. the first one) causes too many mute/unmute issues
+      (cf. lp #883485). The behavior with a vanilla xfce session remains
+      unchanged.
+
+ -- Lionel Le Folgoc <mrpouit@ubuntu.com>  Thu, 22 Mar 2012 00:07:36 +0100
+
+xfce4-volumed (0.1.13-2) unstable; urgency=low
+
+  * debian/control: explicitly depends on libgtk2.0-dev.
+
+ -- Lionel Le Folgoc <mrpouit@gmail.com>  Sun, 19 Jun 2011 11:40:29 +0200
+
+xfce4-volumed (0.1.13-1) unstable; urgency=low
+
+  [ Yves-Alexis Perez ]
+  * New upstream release.
+  * debian/control:
+    - add build-dep on hardening-includes.
+    - update standards version to 3.9.2.
+    - remove Emanuele and Simon from uploaders.
+  * Switch to 3.0 (quilt) source format.
+  * debian/rules:
+    - pick {C,LD}FLAGS from dpkg-buildflags.
+    - add -O1, -z,defs and --as-needed to LDFLAGS.
+    - add hardening flags to {C,LD}FLAGS.
+
+  [ Lionel Le Folgoc ]
+  * debian/control:
+    - add myself to Uploaders
+    - clean up build-deps: drop exo and xfcegui4, switch from xcb-keysyms1 to
+      libkeybinder-dev >= 0.2.2-2 (previous revisions didn't ship the .pc)
+    - drop unused ${shlibs:Recommends}.
+    - update description                                            lp: #725986
+  * Switch to 3.0 (quilt).
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 20 Apr 2011 13:23:23 +0200
+
+xfce4-volumed (0.1.8-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 18 Nov 2009 08:42:27 +0100
+
+xfce4-volumed (0.1.7-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Sun, 01 Nov 2009 14:08:37 +0100
+
+xfce4-volumed (0.1.5-1) unstable; urgency=low
+
+  * Initial release                                            closes: #545098
+
+ -- Yves-Alexis Perez <corsac@debian.org>  Wed, 28 Oct 2009 08:44:04 +0100

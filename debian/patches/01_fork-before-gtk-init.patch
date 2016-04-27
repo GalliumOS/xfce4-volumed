@@ -1,0 +1,32 @@
+Description: Call fork() before gtk_init()
+ Calling fork() after gtk_init() can have side-effects such as breaking DBus
+ in the child if gtk_init() opened a DBus connection. One such situation in
+ which gtk_init() will open a DBus connection is when Ubuntu menu proxies or
+ overlay scrollbar are enabled.
+Author: Alistair Buxton
+Origin: vendor, https://code.launchpad.net/~a-j-buxton/xfce4-volumed-pulse/fork-before-gtk-init
+Bug-Ubuntu: https://bugs.launchpad.net/ubuntu/+source/xfce4-volumed/+bug/1347272
+Forwarded: not-needed
+Reviewed-by: Sean Davis <bluesabre@ubuntu.com>
+---
+This patch header follows DEP-3: http://dep.debian.net/deps/dep3/
+--- a/src/main.c
++++ b/src/main.c
+@@ -119,8 +119,6 @@
+ 	g_option_context_add_main_entries (context, option_entries, NULL);
+ 	g_option_context_add_group (context, gtk_get_option_group (FALSE));
+ 
+-	gtk_init (&argc, &argv);
+-
+ 	/* parse options */
+ 	if (!g_option_context_parse (context, &argc, &argv, &error))
+ 	{
+@@ -157,6 +155,8 @@
+ 			g_warning ("Failed to fork the process: %s. Continuing in non-daemon mode.", g_strerror (errno));
+ 		}
+ 	}
++	
++	gtk_init (&argc, &argv);
+ 
+ 	/* Grab the keys */
+ 	xvd_keys_init (Inst);
