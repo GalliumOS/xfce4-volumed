@@ -1,3 +1,9 @@
+xfce4-volumed (0.2.0-0ubuntu2-galliumos1.1) bismuth; urgency=medium
+
+  * Prepare for GalliumOS 3.0
+
+ -- reynhout <reynhout@galliumos.org>  Mon, 07 May 2018 05:29:55 +0000
+
 xfce4-volumed (0.2.0-0ubuntu2-galliumos1) vivid; urgency=medium
 
   * debian/patches/volume-icon-fixes.patch
